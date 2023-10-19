@@ -1,0 +1,22 @@
+{
+	"eslint.enable": true,
+	"prettier.enable": true,
+	"stylelint.enable": true,
+	"eslint.validate": [
+		"astro",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"scss.validate": false,
+	"stylelint.validate": ["scss"],
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true
+	}
+}

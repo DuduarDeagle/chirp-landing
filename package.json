@@ -1,0 +1,49 @@
+{
+	"name": "chirp-landing",
+	"version": "0.0.1",
+	"author": {
+		"name": "Duduar Deagle",
+		"email": "duduar@skiff.com",
+		"url": "https://duduar.vercel.app"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/duduardeagle/chirp-landing.git"
+	},
+	"type": "module",
+	"license": "Apache-2.0",
+	"private": true,
+	"scripts": {
+		"postinstall": "husky install",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"lint": "eslint . --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.astro",
+		"prettier": "prettier . --check --plugin=prettier-plugin-astro",
+		"prettier:fix": "prettier . --write --plugin=prettier-plugin-astro",
+		"stylelint": "stylelint **/*.scss",
+		"stylelint:fix": "stylelint --fix **/*.scss"
+	},
+	"dependencies": {
+		"@commitlint/cli": "17.8.0",
+		"@typescript-eslint/eslint-plugin": "6.8.0",
+		"@typescript-eslint/parser": "6.8.0",
+		"astro": "3.3.0",
+		"autoprefixer": "10.4.16",
+		"bun-types": "1.0.6",
+		"cssnano": "6.0.1",
+		"cssnano-preset-advanced": "6.0.1",
+		"eslint": "8.51.0",
+		"eslint-config-prettier": "9.0.0",
+		"eslint-plugin-astro": "0.29.1",
+		"gitmoji-cli": "8.5.0",
+		"husky": "8.0.3",
+		"lint-staged": "15.0.1",
+		"prettier": "3.0.3",
+		"prettier-plugin-astro": "0.12.0",
+		"sass": "1.69.3",
+		"stylelint": "15.10.3",
+		"typescript": "5.2.2"
+	}
+}

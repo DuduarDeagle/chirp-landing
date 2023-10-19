@@ -1,0 +1,45 @@
+@font-face {
+	font-family: Inter;
+	font-weight: 500;
+	font-display: swap;
+	src: url("/fonts/inter-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Inter;
+	font-weight: 600;
+	font-display: swap;
+	src: url("/fonts/inter-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Inter;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/fonts/inter-latin-700-normal.woff2") format("woff2");
+}
+
+* {
+	box-sizing: border-box;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+	font-family: Inter, system-ui;
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+}

@@ -1,0 +1,4 @@
+{
+	"*": ["eslint --quiet", "prettier --check --plugin=prettier-plugin-astro"],
+	"**/*.scss": ["stylelint"]
+}
