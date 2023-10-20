@@ -1,0 +1,38 @@
+---
+import AvatarPicture from "@components/AvatarPicture.astro"
+import HearthIcon from "@components/HearthIcon.astro"
+import TwitterIcon from "@components/TwitterIcon.astro"
+
+interface Props {
+	avatar: string
+	date: string
+	likes: number
+	name: string
+	username: string
+}
+
+const { avatar, date, likes, name, username } = Astro.props
+---
+
+<div class="card--twitter">
+	<div class="card--twitter__header">
+		<div class="card--twitter__user-data-container">
+			<AvatarPicture src={avatar} />
+			<div>
+				<p class="card--twitter__name">{name}</p>
+				<p class="card--twitter__username">{username}</p>
+			</div>
+		</div>
+		<TwitterIcon class="icon--curious-blue" />
+	</div>
+	<p>
+		<slot />
+	</p>
+	<div class="card--twitter__footer">
+		<div class="card--twitter__likes-container">
+			<HearthIcon />
+			<span>{likes}</span>
+		</div>
+		<p>{date}</p>
+	</div>
+</div>

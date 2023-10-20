@@ -1,0 +1,50 @@
+@use "@styles/variables" as *;
+
+.header {
+	padding-block: 1.5rem;
+	gap: 1.5rem;
+	background: $spring-wood;
+
+	&__picture {
+		margin-block: 0.5rem;
+	}
+
+	&__content {
+		gap: 0.5rem;
+	}
+
+	&__link {
+		margin-inline: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.125rem;
+		color: $jelly-bean;
+	}
+}
+
+.avatars-container {
+	display: inline-flex;
+
+	:not(:first-child) {
+		margin-left: -1.25rem;
+	}
+}
+
+.main {
+	gap: 1.5rem;
+}
+
+.reviews {
+	padding-block: 3rem;
+	gap: 1.5rem;
+	background: $iceberg;
+}
+
+.pricing {
+	gap: 3rem;
+
+	&__header {
+		gap: 0.75rem;
+		text-align: center;
+	}
+}

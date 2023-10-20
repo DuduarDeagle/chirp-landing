@@ -1,0 +1,13 @@
+---
+const { emoji, title } = Astro.props
+---
+
+<div class="card">
+	<div class="card__title">
+		<span class="card__emoji">{emoji}</span>
+		<h3>{title}</h3>
+	</div>
+	<p>
+		<slot />
+	</p>
+</div>

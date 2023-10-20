@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @font-face {
 	font-family: Inter;
 	font-weight: 500;
@@ -35,11 +37,85 @@ html {
 	font-weight: 500;
 }
 
+body {
+	display: grid;
+	gap: 3rem;
+}
+
+header,
+main,
+section,
+footer,
+div {
+	display: grid;
+}
+
+footer {
+	padding-block: 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	background: $iceberg;
+}
+
+hr {
+	border: 1px solid $bon-jour;
+	border-radius: 0.25rem;
+	width: 100%;
+	margin-inline: auto;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+	line-height: 1.2;
 	font-size: inherit;
+}
+
+p {
+	line-height: 1.4;
+	font-size: 0.875em;
+	color: $mountain-mist;
+}
+
+span {
+	color: $mountain-mist;
+}
+
+a {
+	font-weight: 600;
+	text-decoration: none;
+	color: inherit;
+
+	@media (pointer: fine) {
+		&:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
+	}
+}
+
+button {
+	border-radius: 0.25rem;
+	padding-block: 1rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: Inter, system-ui;
+	font-weight: 600;
+	font-size: 0.875em;
+	color: white;
+	user-select: none;
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+img {
+	width: 100%;
 }
