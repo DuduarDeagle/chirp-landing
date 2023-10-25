@@ -32,94 +32,129 @@ import styles from "@styles/modules/Home.module.scss"
 	<header class:list={["container", styles.header]}>
 		<div class="navbar-container">
 			<Logo />
-			<HamburgerIcon />
+			<nav class="navbar">
+				<ul class="navbar__list">
+					<li>
+						<a href="#" class="navbar__link">Home</a>
+					</li>
+					<li>
+						<a href="#" class="navbar__link">Pricing</a>
+					</li>
+					<li>
+						<a href="#" class="navbar__link">FAQ</a>
+					</li>
+				</ul>
+				<TwitterButton />
+			</nav>
+			<HamburgerIcon class="navbar__hamburger-icon" />
 		</div>
-		<picture class={styles.header__picture}>
-			<img
-				srcset="/img/hero-sm.webp"
-				alt="Statistical graph of a user's Twitter account data"
-			/>
-		</picture>
-		<div class={styles.header__content}>
-			<h1 class="title">Twitter analytics taken to a whole new level</h1>
-			<p>
-				Chirp is a suite of Twitter analytics that will help you better
-				understand your audience, which tweets they like, and most importantly,
-				when they are the most active on Twitter.
-			</p>
+		<div class={styles.header__group}>
+			<picture class={styles.header__picture}>
+				<source
+					type="image/webp"
+					media="(max-width: 767px)"
+					srcset="/img/hero-sm.webp"
+				/>
+				<source
+					type="image/webp"
+					media="(max-width: 1023px)"
+					srcset="/img/hero-md.webp"
+				/>
+				<img
+					src="/img/hero-lg.webp"
+					alt="Statistical graph of a user's Twitter account data"
+				/>
+			</picture>
+			<div class={styles.header__content}>
+				<div class={styles.header__info}>
+					<h1 class="title">Twitter analytics taken to a whole new level</h1>
+					<p>
+						Chirp is a suite of Twitter analytics that will help you better
+						understand your audience, which tweets they like, and most
+						importantly, when they are the most active on Twitter.
+					</p>
+				</div>
+				<div class={styles.header__actions}>
+					<TwitterButton class="btn--large" />
+					<a href="#" class={styles.header__link}>
+						Learn more
+						<ArrowIcon />
+					</a>
+				</div>
+				<div class={styles["avatars-container"]}>
+					<AvatarPicture src={Avatar1.src} />
+					<AvatarPicture src={Avatar2.src} />
+					<AvatarPicture src={Avatar3.src} />
+					<AvatarPicture src={Avatar4.src} />
+					<AvatarPicture src={Avatar5.src} />
+					<AvatarPicture src={Avatar6.src} />
+					<AvatarPicture src={Avatar7.src} />
+					<AvatarPicture src={Avatar8.src} />
+					<AvatarPicture src={Avatar9.src} />
+				</div>
+				<p>
+					Join <span class="text-focus">195</span> other who have analyzed their
+					followers and scheduled <span class="text-focus">1342</span> tweets!
+				</p>
+			</div>
 		</div>
-		<TwitterButton />
-		<a href="#" class={styles.header__link}>
-			Learn more
-			<ArrowIcon />
-		</a>
-		<div class={styles["avatars-container"]}>
-			<AvatarPicture src={Avatar1.src} />
-			<AvatarPicture src={Avatar2.src} />
-			<AvatarPicture src={Avatar3.src} />
-			<AvatarPicture src={Avatar4.src} />
-			<AvatarPicture src={Avatar5.src} />
-			<AvatarPicture src={Avatar6.src} />
-			<AvatarPicture src={Avatar7.src} />
-			<AvatarPicture src={Avatar8.src} />
-			<AvatarPicture src={Avatar9.src} />
-		</div>
-		<p>
-			Join <span class="text-focus">195</span> other who have analyzed their
-			followers and scheduled <span class="text-focus">1342</span> tweets!
-		</p>
 	</header>
 	<main id="features" class:list={["container", styles.main]}>
 		<h2 class="title">Features that help you Tweet smarter</h2>
-		<FeatureCard emoji="📈" title="Analytics">
-			We constantly monitor your audience as it grows -- so you can Tweet when
-			your followers are most likely to be online and ready to engage with your
-			content.
-		</FeatureCard>
-		<FeatureCard emoji="🤓" title="Smart Analyzer">
-			Chirp automatically recognizes your followers' most active times and
-			automatically sends your notifications if you're missing out on an
-			opportunity.
-		</FeatureCard>
-		<FeatureCard emoji="🗞️" title="Scheduled Your Tweets">
-			Quality tweets drive tons of engagement. With Chirp, you can write tweets
-			in an advance and schedule them when your audience is most likely to read.
-		</FeatureCard>
-		<FeatureCard emoji="🌑" title="Dark Mode">
-			Friendly on the eyes, no matter what time you write your Tweets. All
-			colors are chosen to make sure your eyes are at ease at all times.
-		</FeatureCard>
+		<div class={styles.features__group}>
+			<FeatureCard emoji="📈" title="Analytics">
+				We constantly monitor your audience as it grows -- so you can Tweet when
+				your followers are most likely to be online and ready to engage with
+				your content.
+			</FeatureCard>
+			<FeatureCard emoji="🤓" title="Smart Analyzer">
+				Chirp automatically recognizes your followers' most active times and
+				automatically sends your notifications if you're missing out on an
+				opportunity.
+			</FeatureCard>
+			<FeatureCard emoji="🗞️" title="Scheduled Your Tweets">
+				Quality tweets drive tons of engagement. With Chirp, you can write
+				tweets in an advance and schedule them when your audience is most likely
+				to read.
+			</FeatureCard>
+			<FeatureCard emoji="🌑" title="Dark Mode">
+				Friendly on the eyes, no matter what time you write your Tweets. All
+				colors are chosen to make sure your eyes are at ease at all times.
+			</FeatureCard>
+		</div>
 	</main>
 	<section id="reviews" class:list={["container", styles.reviews]}>
 		<h2 class="title">What our customers say</h2>
-		<TwitterCard
-			avatar={Avatar9.src}
-			date="March 2, 2021"
-			likes={2}
-			name="Sara May"
-			username="@sara_may">
-			I just tried out @chirp and it's amazing, love all the analytics I can
-			see.
-		</TwitterCard>
-		<TwitterCard
-			avatar={Avatar3.src}
-			date="March 2, 2021"
-			likes={32}
-			name="Jack Scott"
-			username="@jackscott_">
-			I initially started using Chirp to support the co-founder as I personally
-			knew him, but after having tried it out for a few weeks, I can genuinely
-			say this changed my Twitter game.
-		</TwitterCard>
-		<TwitterCard
-			avatar={Avatar8.src}
-			date="March 2, 2021"
-			likes={221}
-			name="Jessica May"
-			username="@jmay98">
-			Absolutely love everything about Chirp, from the design to how everything
-			works smoothly.
-		</TwitterCard>
+		<div class={styles.reviews__group}>
+			<TwitterCard
+				avatar={Avatar9.src}
+				date="March 2, 2021"
+				likes={2}
+				name="Sara May"
+				username="@sara_may">
+				I just tried out @chirp and it's amazing, love all the analytics I can
+				see.
+			</TwitterCard>
+			<TwitterCard
+				avatar={Avatar3.src}
+				date="March 2, 2021"
+				likes={32}
+				name="Jack Scott"
+				username="@jackscott_">
+				I initially started using Chirp to support the co-founder as I
+				personally knew him, but after having tried it out for a few weeks, I
+				can genuinely say this changed my Twitter game.
+			</TwitterCard>
+			<TwitterCard
+				avatar={Avatar8.src}
+				date="March 2, 2021"
+				likes={221}
+				name="Jessica May"
+				username="@jmay98">
+				Absolutely love everything about Chirp, from the design to how
+				everything works smoothly.
+			</TwitterCard>
+		</div>
 	</section>
 	<section id="pricing" class:list={["container", styles.pricing]}>
 		<div class={styles.pricing__header}>

@@ -5,12 +5,43 @@
 	gap: 1.5rem;
 	background: $spring-wood;
 
+	&__group {
+		gap: 1.5rem;
+
+		@media (width >= 1024px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+		}
+	}
+
 	&__picture {
 		margin-block: 0.5rem;
+
+		@media (width >= 1024px) {
+			margin-block: 0;
+			order: 1;
+		}
 	}
 
 	&__content {
-		gap: 0.5rem;
+		gap: 1.5rem;
+
+		@media (width >= 1024px) {
+			margin-top: 3rem;
+			align-content: flex-start;
+		}
+	}
+
+	&__info {
+		gap: 0.75rem;
+	}
+
+	&__actions {
+		gap: 1.5rem;
+
+		@media (width>= 768px) {
+			grid-template-columns: max-content max-content;
+		}
 	}
 
 	&__link {
@@ -34,10 +65,31 @@
 	gap: 1.5rem;
 }
 
+.features__group {
+	gap: 1.5rem;
+
+	@media (width >= 1024px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 .reviews {
 	padding-block: 3rem;
 	gap: 1.5rem;
 	background: $iceberg;
+
+	&__group {
+		gap: 1.5rem;
+
+		@media (width >= 768px) {
+			overflow-x: auto;
+			grid-template-columns: max-content max-content max-content;
+		}
+
+		@media (width>=1024px) {
+			margin-inline: auto;
+		}
+	}
 }
 
 .pricing {

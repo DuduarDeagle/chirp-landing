@@ -1,8 +1,10 @@
 ---
 import TwitterIcon from "@components/TwitterIcon.astro"
+
+const { class: classNames } = Astro.props
 ---
 
-<button class="btn--twitter">
+<button class:list={["btn--twitter", classNames]}>
 	<TwitterIcon class="icon--white" />
 	 Sign in with Twitter
 </button>
