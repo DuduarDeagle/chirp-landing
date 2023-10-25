@@ -1,6 +1,7 @@
-# Apache License
+# Apache License 2.0
 
 _Version 2.0, January 2004_
+
 https://www.apache.org/licenses/
 
 **TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION**
