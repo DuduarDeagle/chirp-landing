@@ -30,7 +30,7 @@
 		"/public/**",
 		"*.scss",
 		"bun.lockb",
-		"LICENSE.md",
+		"LICENSE",
 		"NOTICE.md",
 		"README.md"
 	],
