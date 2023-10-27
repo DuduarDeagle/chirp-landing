@@ -31,7 +31,7 @@
 		"*.scss",
 		"bun.lockb",
 		"LICENSE",
-		"NOTICE.md",
+		"NOTICE",
 		"README.md"
 	],
 	"rules": {
