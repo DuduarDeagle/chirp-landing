@@ -4,6 +4,30 @@
 .container {
 	padding-inline: 5%;
 
+	&--small {
+		padding-inline: 5%;
+
+		@media (width >= 428px) {
+			padding-inline: 15%;
+		}
+
+		@media (width >= 640px) {
+			padding-inline: 20%;
+		}
+
+		@media (width >= 768px) {
+			padding-inline: 30%;
+		}
+
+		@media (width >= 1280px) {
+			padding-inline: 40%;
+		}
+	}
+
+	@media (width>=1024px) {
+		padding-block: 1.5rem;
+	}
+
 	@media (width >= 1280px) {
 		padding-inline: 15%;
 	}
@@ -115,6 +139,16 @@
 }
 
 .footer {
+	&__links-container {
+		justify-content: space-between;
+		align-items: center;
+		gap: 1.5rem;
+
+		@media (width >= 428px) {
+			grid-template-columns: min-content min-content;
+		}
+	}
+
 	&__legal-info-container {
 		display: grid;
 		grid-template-columns: min-content max-content max-content;
@@ -126,6 +160,12 @@
 		font-weight: 300;
 		font-size: 0.875em;
 		color: $mountain-mist;
+	}
+
+	&__author {
+		@media (width >= 428px) {
+			text-align: center;
+		}
 	}
 }
 

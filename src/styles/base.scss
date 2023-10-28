@@ -52,13 +52,11 @@ div {
 
 footer {
 	padding-block: 1.5rem;
-	justify-content: space-between;
-	align-items: center;
-	gap: 1rem;
+	gap: 1.5rem;
 	background: $iceberg;
 
-	@media (width >= 428px) {
-		grid-template-columns: min-content min-content;
+	@media (width>=1024px) {
+		padding-block: 3rem;
 	}
 }
 
